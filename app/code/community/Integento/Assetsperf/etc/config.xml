@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Integento
+ * @package     Integento_Assetsperf
+ * @copyright   Copyright (c) 2016 @Darklg
+ * @license     MIT
+ * @author      @Darklg
+ */
+-->
+<config>
+    <modules>
+        <Integento_Assetsperf>
+            <version>0.1.0</version>
+        </Integento_Assetsperf>
+    </modules>
+    <global>
+        <helpers>
+            <core>
+                <integento_assetsperf>
+                    <class>Integento_Assetsperf_Helper</class>
+                </integento_assetsperf>
+            </core>
+            <core>
+                <rewrite>
+                    <data>Integento_Assetsperf_Helper_Core_Data</data>
+                </rewrite>
+            </core>
+        </helpers>
+    </global>
+</config>
