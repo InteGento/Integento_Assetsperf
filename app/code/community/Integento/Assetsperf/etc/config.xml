@@ -11,7 +11,7 @@
 <config>
     <modules>
         <Integento_Assetsperf>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Integento_Assetsperf>
     </modules>
     <global>
@@ -27,5 +27,13 @@
                 </rewrite>
             </core>
         </helpers>
+        <blocks>
+            <class>Integento_Assetsperf_Block</class>
+            <page>
+                <rewrite>
+                    <html_head>Integento_Assetsperf_Block_Page_Html_Head</html_head>
+                </rewrite>
+            </page>
+        </blocks>
     </global>
 </config>
