@@ -35,10 +35,14 @@ class Integento_Assetsperf_Helper_Core_Data extends Mage_Core_Helper_Data {
 
         switch ($content_type) {
         case 'css':
-            $beforeMergeCallback = array(&$this, 'integento_filter_css');
+            if ($this->_getConfig('enablecompression_js')) {
+                $beforeMergeCallback = array(&$this, 'integento_filter_css');
+            }
             break;
         case 'js':
-            $beforeMergeCallback = array(&$this, 'integento_filter_js');
+            if ($this->_getConfig('enablecompression_js')) {
+                $beforeMergeCallback = array(&$this, 'integento_filter_js');
+            }
             break;
         }
 
@@ -100,5 +104,9 @@ class Integento_Assetsperf_Helper_Core_Data extends Mage_Core_Helper_Data {
         }
 
         return (substr($haystack, -$length) === $needle);
+    }
+
+    private function _getConfig($path) {
+        return Mage::getStoreConfig('integento_assetsperf/settings/' . $path);
     }
 }

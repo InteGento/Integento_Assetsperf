@@ -12,7 +12,7 @@ Integento_Assetsperf is a Magento Module adding a simple compression to the CSS/
 
 ```xml
 <action method="addItemFirst">
-    <script>custom/custom.js</script>
+    <name>custom/custom.js</name>
     <type>js</type>
 </action>
 ```
@@ -22,7 +22,7 @@ Integento_Assetsperf is a Magento Module adding a simple compression to the CSS/
 ```xml
 <action method="addItemAfter">
     <after>prototype/prototype.js</after>
-    <script>custom/custom.js</script>
+    <name>custom/custom.js</name>
     <type>js</type>
 </action>
 ```

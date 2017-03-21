@@ -11,16 +11,14 @@
 <config>
     <modules>
         <Integento_Assetsperf>
-            <version>0.2.0</version>
+            <version>0.3.0</version>
         </Integento_Assetsperf>
     </modules>
     <global>
         <helpers>
-            <core>
-                <integento_assetsperf>
-                    <class>Integento_Assetsperf_Helper</class>
-                </integento_assetsperf>
-            </core>
+            <integento_assetsperf>
+                <class>Integento_Assetsperf_Helper</class>
+            </integento_assetsperf>
             <core>
                 <rewrite>
                     <data>Integento_Assetsperf_Helper_Core_Data</data>
@@ -36,4 +34,25 @@
             </page>
         </blocks>
     </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <integento_assetsperf>
+                                            <title>Integento AssetsPerfs</title>
+                                        </integento_assetsperf>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
 </config>
